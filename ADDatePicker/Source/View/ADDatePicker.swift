@@ -41,18 +41,14 @@ open class ADDatePicker: UIView {
     public var delegate:ADDatePickerDelegate?
     
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    public init() {
+        super.init(frame: .zero)
         loadinit()
         registerCell()
-        
     }
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadinit()
-        registerCell()
+
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override open func willMove(toSuperview newSuperview: UIView?) {
